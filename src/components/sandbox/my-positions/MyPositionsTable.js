@@ -6,7 +6,7 @@ import * as IoIcons from 'react-icons/io'
 
 import './MyPositionsTable.css'
 
-function MyPositionsTable({ columns, data }) {
+function MyPositionsTable({ initPageSize, columns, data }) {
 
   // Use the useTable Hook to send the columns and data to build the table
   const {
@@ -31,7 +31,7 @@ function MyPositionsTable({ columns, data }) {
     {
       columns,
       data,
-      initialState: { pageIndex: 0, pageSize: 13},
+      initialState: { pageIndex: 0, pageSize: initPageSize},
     },
     usePagination
   )

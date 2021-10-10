@@ -65,7 +65,7 @@ function MyPositionsBody(props) {
             <div className='my-pos-body-area'>
                 <div className='my-pos-body-box'>
                     <div className='my-pos-box-body'>
-                        <Table className='content-box-table' columns={columns} data={props.data} />
+                        <Table className='content-box-table' initPageSize={13} columns={columns} data={props.data} />
                     </div>
                 </div>
             </div>

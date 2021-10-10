@@ -1,0 +1,91 @@
+.card-area {
+
+    width: 180px;
+    height: 220px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-border {
+    background-color: #1a1a1a;
+
+    border: transparent;
+    border-radius: 20px;
+    outline: white;
+    outline-width: 1px;
+    outline-style: double;
+
+    width: 100%;
+    height: 100%;
+
+    color: white;
+}
+.card-border:hover {
+    outline: violet;
+    outline-width: 2px;
+    outline-style: double;
+}
+
+.card-header {
+    width: 100%;
+    height: 20%;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.token-icon-1 {
+    max-height: 80%;
+    margin-right: 2.5%;
+}
+.token-icon-2 {
+    max-height: 80%;
+    margin-left: 2.5%;
+}
+
+.card-title {
+    width: 100%;
+    height: 10%;
+
+    font-size: 15pt;
+
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.card-body {
+    width: 100%;
+    height: 70%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.data-column {
+    font-size: 10pt;
+
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.data-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.data-title {
+    text-align: left;
+    width: 40%;
+} 
+.data-point {
+    text-align: right;
+    width: 40%;
+}

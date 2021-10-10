@@ -5,8 +5,7 @@ import React, { useMemo, useState, useEffect } from "react";
 
 import Table from "../my-positions/MyPositionsTable";
 
-import * as IoIcons from 'react-icons/io'
-import * as WiIcons from 'react-icons/wi'
+
 
 
 import './TreasuryBody.css'
@@ -52,7 +51,7 @@ function TreasuryBody(props) {
             <div className='treasury-body-area'>
                 <div className='treasury-body-box'>
                     <div className='treasury-box-body'>
-                        <Table className='treasury-table' columns={columns} data={props.data} />
+                        <Table className='treasury-table' initPageSize={25} columns={columns} data={props.data} />
                     </div>
                 </div>
             </div>

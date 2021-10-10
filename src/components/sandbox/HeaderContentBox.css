@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: center;
 }
-.content-boxy {
+.content-box {
     background-color: #1a1a1a;
 
     border: transparent;
@@ -35,7 +35,6 @@
 
 }
 .content-body {
-    background-color: #1a1a1a;
     width: 100%;
     height: 70%;
     margin: auto;
@@ -45,7 +44,31 @@
 
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
+}
+
+.lwd-box {
+    display: block;
+
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.lwd-header {
+    display: flex;
+    align-items: center;
     justify-content: center;
+
+    font-weight: bold;
+    font-size: 15pt;
+}
+
+.lwd-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15pt;
 }
 
 span {
