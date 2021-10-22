@@ -1,8 +1,5 @@
 import React from 'react'
 
-// title + icon
-// data labels + values
-
 import './HeaderContentBox.css'
 
 export function LabelWithData({title, datapoint}) {

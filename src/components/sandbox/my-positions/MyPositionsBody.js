@@ -3,7 +3,7 @@ import React, { useMemo, useState, useEffect } from "react";
 // title + icon
 // data labels + values
 
-import Table from "./MyPositionsTable";
+import Table from "../../PositionsTable";
 
 import * as IoIcons from 'react-icons/io'
 import * as WiIcons from 'react-icons/wi'
@@ -38,8 +38,8 @@ function MyPositionsBody(props) {
                 collapse: true
               },
               {
-                Header: "Earnings",
-                accessor: "earnings",
+                Header: "Shares",
+                accessor: "shares",
               },
               {
                 Header: "Actions",

@@ -1,7 +1,10 @@
 import React from 'react';
-import './App.css';
-import SideBar from './components/sandbox/SideBar';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+
+import './App.css';
+
+import SideBar from './components/SideBar';
+
 import Dashboard from './pages/Dashboard';
 import Pools from './pages/Pools';
 import MyPositions from './pages/MyPositions';

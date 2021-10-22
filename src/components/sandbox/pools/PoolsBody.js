@@ -3,70 +3,41 @@ import React, { useMemo, useState, useEffect } from "react";
 import * as IoIcons from 'react-icons/io'
 import * as TiIcons from 'react-icons/ti'
 
-
-import Table from "../my-positions/MyPositionsTable";
+import Table from "../../PositionsTable";
 
 import './PoolsBody.css'
 import Card from "./PoolCard"
 
 import btc_logo from './btc.png';
 import eth_logo from './eth.png';
+import univ3_pos from './univ3-pos.png';
 
-const poolData =
-    {
-      tokenA: "BTC",
-      tokenB: "ETH",
-      iconTokenA: btc_logo,
-      iconTokenB: eth_logo,
-      attributes: [
-        {
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        }
-      ]
-    }
+import PopUpBox from "../dashboard/PopUpBox";
 
 function PoolsBody(props) {
 
-  const cardData =
+  let cardData =
   {
-    tokenA: "BTC",
-    tokenB: "ETH",
+    uniNFT: univ3_pos,
+    tokenA: "TOK-A",
+    tokenB: "TKB",
     iconTokenA: btc_logo,
     iconTokenB: eth_logo,
     attributes: [
       {
-        title: "Hello",
+        title: "Fee Teir",
         point: "World"
       },{
-        title: "Hello",
+        title: "Tick Range",
         point: "World"
       },{
-        title: "Hello",
+        title: "APR",
         point: "World"
       },{
-        title: "Hello",
+        title: "TVL",
         point: "World"
       },{
-        title: "Hello",
-        point: "World"
-      },{
-        title: "Hello",
+        title: "Members",
         point: "World"
       }
     ]
@@ -74,495 +45,132 @@ function PoolsBody(props) {
 
   let poolData = [
     {
-      tokenA: "BTC",
+      uniNFT: univ3_pos,
+      tokenA: "SUSHI",
       tokenB: "ETH",
       iconTokenA: btc_logo,
       iconTokenB: eth_logo,
       attributes: [
         {
-          title: "Hello",
+          title: "Fee Teir",
           point: "World"
         },{
-          title: "Hello",
+          title: "Tick Range",
           point: "World"
         },{
-          title: "Hello",
+          title: "APR",
           point: "World"
         },{
-          title: "Hello",
+          title: "TVL",
           point: "World"
         },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
+          title: "Members",
           point: "World"
         }
       ]
     },{
-      tokenA: "BTC",
+      uniNFT: univ3_pos,
+      tokenA: "MKR",
       tokenB: "ETH",
       iconTokenA: btc_logo,
       iconTokenB: eth_logo,
       attributes: [
         {
-          title: "Hello",
+          title: "Fee Teir",
           point: "World"
         },{
-          title: "Hello",
+          title: "Tick Range",
           point: "World"
         },{
-          title: "Hello",
+          title: "APR",
           point: "World"
         },{
-          title: "Hello",
+          title: "TVL",
           point: "World"
         },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        }
-      ]
-
-    },{
-      tokenA: "BTC",
-      tokenB: "ETH",
-      iconTokenA: btc_logo,
-      iconTokenB: eth_logo,
-      attributes: [
-        {
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        }
-      ]
-
-    },{
-      tokenA: "BTC",
-      tokenB: "ETH",
-      iconTokenA: btc_logo,
-      iconTokenB: eth_logo,
-      attributes: [
-        {
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        }
-      ]
-
-    },{
-      tokenA: "BTC",
-      tokenB: "ETH",
-      iconTokenA: btc_logo,
-      iconTokenB: eth_logo,
-      attributes: [
-        {
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        }
-      ]
-
-    }, {
-      tokenA: "BTC",
-      tokenB: "ETH",
-      iconTokenA: btc_logo,
-      iconTokenB: eth_logo,
-      attributes: [
-        {
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        }
-      ]
-
-    },    {
-      tokenA: "BTC",
-      tokenB: "ETH",
-      iconTokenA: btc_logo,
-      iconTokenB: eth_logo,
-      attributes: [
-        {
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
+          title: "Members",
           point: "World"
         }
       ]
     },{
-      tokenA: "BTC",
+      uniNFT: univ3_pos,
+      tokenA: "DAI",
       tokenB: "ETH",
       iconTokenA: btc_logo,
       iconTokenB: eth_logo,
       attributes: [
         {
-          title: "Hello",
+          title: "Fee Teir",
           point: "World"
         },{
-          title: "Hello",
+          title: "Tick Range",
           point: "World"
         },{
-          title: "Hello",
+          title: "APR",
           point: "World"
         },{
-          title: "Hello",
+          title: "TVL",
           point: "World"
         },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        }
-      ]
-
-    },{
-      tokenA: "BTC",
-      tokenB: "ETH",
-      iconTokenA: btc_logo,
-      iconTokenB: eth_logo,
-      attributes: [
-        {
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        }
-      ]
-
-    },{
-      tokenA: "BTC",
-      tokenB: "ETH",
-      iconTokenA: btc_logo,
-      iconTokenB: eth_logo,
-      attributes: [
-        {
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        }
-      ]
-
-    },{
-      tokenA: "BTC",
-      tokenB: "ETH",
-      iconTokenA: btc_logo,
-      iconTokenB: eth_logo,
-      attributes: [
-        {
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        }
-      ]
-
-    }, {
-      tokenA: "BTC",
-      tokenB: "ETH",
-      iconTokenA: btc_logo,
-      iconTokenB: eth_logo,
-      attributes: [
-        {
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        }
-      ]
-
-    },{
-      tokenA: "BTC",
-      tokenB: "ETH",
-      iconTokenA: btc_logo,
-      iconTokenB: eth_logo,
-      attributes: [
-        {
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
+          title: "Members",
           point: "World"
         }
       ]
     },{
-      tokenA: "BTC",
+      uniNFT: univ3_pos,
+      tokenA: "USDC",
       tokenB: "ETH",
       iconTokenA: btc_logo,
       iconTokenB: eth_logo,
       attributes: [
         {
-          title: "Hello",
+          title: "Fee Teir",
           point: "World"
         },{
-          title: "Hello",
+          title: "Tick Range",
           point: "World"
         },{
-          title: "Hello",
+          title: "APR",
           point: "World"
         },{
-          title: "Hello",
+          title: "TVL",
           point: "World"
         },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
+          title: "Members",
           point: "World"
         }
       ]
-
     },{
+      uniNFT: univ3_pos,
       tokenA: "BTC",
       tokenB: "ETH",
       iconTokenA: btc_logo,
       iconTokenB: eth_logo,
       attributes: [
         {
-          title: "Hello",
+          title: "Fee Teir",
           point: "World"
         },{
-          title: "Hello",
+          title: "Tick Range",
           point: "World"
         },{
-          title: "Hello",
+          title: "APR",
           point: "World"
         },{
-          title: "Hello",
+          title: "TVL",
           point: "World"
         },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
+          title: "Members",
           point: "World"
         }
       ]
-
-    },{
-      tokenA: "BTC",
-      tokenB: "ETH",
-      iconTokenA: btc_logo,
-      iconTokenB: eth_logo,
-      attributes: [
-        {
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        }
-      ]
-
-    },{
-      tokenA: "BTC",
-      tokenB: "ETH",
-      iconTokenA: btc_logo,
-      iconTokenB: eth_logo,
-      attributes: [
-        {
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        }
-      ]
-
-    }, {
-      tokenA: "BTC",
-      tokenB: "ETH",
-      iconTokenA: btc_logo,
-      iconTokenB: eth_logo,
-      attributes: [
-        {
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        },{
-          title: "Hello",
-          point: "World"
-        }
-      ]
-
     }
   ]
 
-  const [pools, setPools] = useState("")
+  const [pools, setPools] = useState(poolData)
 
   function addPoolCard() {
-    setPools(pools => [...pools, poolData]);
+    setPools(pools => [...pools, cardData]);
   }
       
   return (
@@ -580,12 +188,17 @@ function PoolsBody(props) {
           <div className='pools-box-body-wrapper'>
             <div className='pools-box-body'>
               {
-                poolData.map((item) =>
-                  <Card data={item}/>
+                pools.map((item) =>
+                  <Card data={item} />
                 )
               }
             </div>
           </div>
+          <div className='table-footer'>
+            <button className='load-more-button' onClick={() => addPoolCard()}>
+              Load More
+          </button>
+      </div>
         </div>
       </div>
     </>

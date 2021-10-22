@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useMemo, useState, useEffect } from "react";
 
 import './PoolCard.css'
+import PopUpBox from "../dashboard/PopUpBox";
 
 
 function makeDataRow(title, datapoint) {
@@ -15,15 +16,24 @@ function makeDataRow(title, datapoint) {
     )
 }
 
+
+
 function PoolCard(props) {
-      
+
+    const [isPopUpVisible, setIsPopUpVisible] = useState(false);
+
+    const togglePopup = () => {
+      setIsPopUpVisible(!isPopUpVisible);
+    }
+    
     return (
         <>
+            {isPopUpVisible && <PopUpBox cardData={props.data} onClose={togglePopup} />}
             <div className='card-area'>
-                <button className='card-border'>
+                <button className='card-border' onClick={togglePopup}>
                     <div className='card-header'>
-                        <img className='token-icon-2' src={props.data.iconTokenB} alt="img2" />
-                        <img className='token-icon-1' src={props.data.iconTokenA} alt="img1" />
+                        <img className='token-icon-2' src={props.data.iconTokenB} alt="img1" />
+                        <img className='token-icon-1' src={props.data.iconTokenA} alt="img2" />
                     </div>
                     <div className='card-title'>
                         {props.data.tokenA}

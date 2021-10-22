@@ -1,8 +1,7 @@
 import React from 'react'
 
-import HeaderContentBox from '../components/sandbox/HeaderContentBox';
+import HeaderContentBox from '../components/HeaderContentBox';
 import BodyContentBox from '../components/sandbox/pools/PoolsBody';
-import { MyPositionData } from '../components/sandbox/my-positions/MyPositionsData'
 
 import * as FaIcons from 'react-icons/fa'
 
@@ -10,28 +9,16 @@ function Pools() {
 
     const header_data = [
         {
-          title: "one",
+          title: "# Pools",
           datapoint: 1
         },
         {
-            title: "two",
+            title: "# Positions",
             datapoint: 2   
         },
         {
-            title: "three",
+            title: "TVL",
             datapoint: 3
-        },
-        {
-          title: "four",
-          datapoint: 4
-        },
-        {
-            title: "five",
-            datapoint: 5
-        },
-        {
-            title: "six",
-            datapoint: 6
         }
       ];
 

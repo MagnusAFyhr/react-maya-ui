@@ -4,9 +4,9 @@ import React from "react";
 import { useTable, usePagination } from 'react-table'
 import * as IoIcons from 'react-icons/io'
 
-import './MyPositionsTable.css'
+import './PositionsTable.css'
 
-function MyPositionsTable({ initPageSize, columns, data }) {
+function PositionsTable({ initPageSize, columns, data }) {
 
   // Use the useTable Hook to send the columns and data to build the table
   const {
@@ -86,11 +86,10 @@ function MyPositionsTable({ initPageSize, columns, data }) {
       <div className='table-footer'>
         <button className='load-more-button' onClick={() => setPageSize(pageSize + 3)}>
               Load More
-              <IoIcons.IoIosArrowDown className='icon'/>
         </button>
       </div>
     </div>
   );
 }
 
-export default MyPositionsTable
+export default PositionsTable

@@ -1,0 +1,134 @@
+.popup-action-pane-area {
+    width: 100%;
+    height: 100%;
+}
+
+.popup-action-pane-header {
+    height: 15%;
+    width: 100%;
+
+    color: white;
+    display: flex;
+
+    font-size: 15pt;
+}
+.popup-action-pane-title-area {
+    height: 100%;
+    width: 70%;
+
+    display: flex;
+    text-align: center;
+    justify-content: center;    
+    align-items: center;
+}
+.popup-action-pane-toggle-switch-area {
+    height: 100%;
+    width: 30%;
+
+    display: flex;
+
+    text-align: center;
+    justify-content: center;    
+    align-items: center;
+}
+
+
+
+.popup-action-pane-body {
+    height: 65%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.popup-action-pane-body-border {
+    height: 100%;
+    width: 90%;
+
+    background-color: #1a1a1a;
+
+    border: transparent;
+    border-radius: 30px;
+    outline: white;
+    outline-width: 1px;
+    outline-style: double;
+}
+
+
+.popup-action-pane-footer {
+    height: 20%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.popup-action-pane-action-button {
+    background-color: #1a1a1a;
+
+    border: transparent;
+    border-radius: 40px;
+    outline: white;
+    outline-width: 1px;
+    outline-style: double;
+
+    font-size: 40px;
+    color: white;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+}
+.popup-action-pane-action-button:hover {
+    background-color: white;
+    color: #1a1a1a;
+}
+
+
+
+.deposit-token-row {
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+.deposit-token-row-icon-area {
+    width: 20%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.deposit-token-icon {
+    max-width: 80%;
+}
+.deposit-token-row-contents {
+    width: 75%;
+    height: 100%;
+
+    display: block;
+    color: white;
+}
+
+.deposit-token-row-contents-amount {
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+
+    font-size: 15pt;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.deposit-token-row-contents-balance {
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    font-size: 12pt;
+}

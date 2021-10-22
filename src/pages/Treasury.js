@@ -1,8 +1,8 @@
 import React from 'react'
 
-import HeaderContentBox from '../components/sandbox/HeaderContentBox';
+import HeaderContentBox from '../components/HeaderContentBox';
 import TreasuryBody from '../components/sandbox/treasury/TreasuryBody';
-import { MyPositionData } from '../components/sandbox/my-positions/MyPositionsData'
+import { MyPositionData } from '../components/data/MyPositionsData'
 import * as GiIcons from 'react-icons/gi'
 
 function Treasury() {
@@ -21,7 +21,7 @@ function Treasury() {
           datapoint: "150.00%"
         },
         {
-            title: "Revenue Per Year",
+            title: "Revenue (1y SMA)",
             datapoint: "$1,000,000.00"
         }
       ];

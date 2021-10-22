@@ -1,7 +1,7 @@
 import React from 'react'
-import HeaderContentBox from '../components/sandbox/HeaderContentBox';
+import HeaderContentBox from '../components/HeaderContentBox';
 import MyPositionsBody from '../components/sandbox/my-positions/MyPositionsBody';
-import { MyPositionData } from '../components/sandbox/my-positions/MyPositionsData'
+import { MyPositionData } from '../components/data/MyPositionsData'
 
 
 import * as FaIcons from 'react-icons/fa'
@@ -15,7 +15,7 @@ function MyPositions() {
         },
         {
             title: "TVL",
-            datapoint: "$100,000.00"
+            datapoint: "$1,000,000.00"
         },
         {
             title: "Net APR % (30d SMA)",

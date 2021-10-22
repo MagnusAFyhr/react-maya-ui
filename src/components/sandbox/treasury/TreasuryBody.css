@@ -1,6 +1,4 @@
 .treasury-body-area {
-    background-color: #1a1a1a;
-
     width: 100%;
     min-width: 800px;
     height: 80%;
@@ -32,8 +30,4 @@
     display: flex;
     align-items:flex-start;
     justify-content: center;
-}
-
-span {
-    margin-left: 16px;
 }

@@ -10,10 +10,10 @@
 
 .page {
   display: flex;
+  background-color: rgb(10, 10, 10);
 }
 
 .dashboard, .pools, .treasury, .my-positions  {
-  background-color: #1a1a1a;
   display: block;
   height: 100vh;
   width: 100%;
