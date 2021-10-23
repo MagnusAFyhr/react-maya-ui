@@ -1,5 +1,5 @@
 import React from 'react'
-import HeaderContentBox from '../components/HeaderContentBox';
+import HeaderContentBox from '../components/reusable/HeaderContentBox';
 import MyPositionsBody from '../components/sandbox/my-positions/MyPositionsBody';
 import { MyPositionData } from '../components/data/MyPositionsData'
 

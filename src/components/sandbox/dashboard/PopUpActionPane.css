@@ -18,7 +18,7 @@
 
     display: flex;
     text-align: center;
-    justify-content: center;    
+    justify-content: right;    
     align-items: center;
 }
 .popup-action-pane-toggle-switch-area {
@@ -53,6 +53,10 @@
     outline: white;
     outline-width: 1px;
     outline-style: double;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -92,7 +96,7 @@
 
 .deposit-token-row {
     width: 100%;
-    height: 50%;
+    height: 30%;
     display: flex;
 }
 .deposit-token-row-icon-area {
@@ -131,4 +135,23 @@
 
     display: flex;
     font-size: 12pt;
+}
+
+
+
+.slider-feedback-area {
+    width: 100%;
+    height: 33%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider-feedback-title-area {
+    width: 100%;
+    height: 33%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

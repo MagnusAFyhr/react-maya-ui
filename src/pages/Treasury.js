@@ -1,6 +1,6 @@
 import React from 'react'
 
-import HeaderContentBox from '../components/HeaderContentBox';
+import HeaderContentBox from '../components/reusable/HeaderContentBox';
 import TreasuryBody from '../components/sandbox/treasury/TreasuryBody';
 import { MyPositionData } from '../components/data/MyPositionsData'
 import * as GiIcons from 'react-icons/gi'

@@ -9,7 +9,6 @@ export function LabelWithData({title, datapoint}) {
                 <div className='lwd-header'>
                     {title}
                 </div>
-
                 <div className='lwd-body'>
                     {datapoint}
                 </div>

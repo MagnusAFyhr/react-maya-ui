@@ -10,7 +10,7 @@
 
 .page {
   display: flex;
-  background-color: rgb(10, 10, 10);
+  background-color: #0a0a0a
 }
 
 .dashboard, .pools, .treasury, .my-positions  {

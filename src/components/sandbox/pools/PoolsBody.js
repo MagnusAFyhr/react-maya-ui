@@ -3,16 +3,12 @@ import React, { useMemo, useState, useEffect } from "react";
 import * as IoIcons from 'react-icons/io'
 import * as TiIcons from 'react-icons/ti'
 
-import Table from "../../PositionsTable";
-
 import './PoolsBody.css'
-import Card from "./PoolCard"
+import Card from "../../reusable/PoolCard";
 
 import btc_logo from './btc.png';
 import eth_logo from './eth.png';
 import univ3_pos from './univ3-pos.png';
-
-import PopUpBox from "../dashboard/PopUpBox";
 
 function PoolsBody(props) {
 

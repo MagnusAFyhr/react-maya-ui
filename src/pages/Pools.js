@@ -1,6 +1,6 @@
 import React from 'react'
 
-import HeaderContentBox from '../components/HeaderContentBox';
+import HeaderContentBox from '../components/reusable/HeaderContentBox';
 import BodyContentBox from '../components/sandbox/pools/PoolsBody';
 
 import * as FaIcons from 'react-icons/fa'

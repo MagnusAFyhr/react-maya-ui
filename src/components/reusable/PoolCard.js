@@ -1,7 +1,7 @@
 import React, { useMemo, useState, useEffect } from "react";
 
 import './PoolCard.css'
-import PopUpBox from "../dashboard/PopUpBox";
+import PopUpBox from "../sandbox/dashboard/PopUpBox";
 
 
 function makeDataRow(title, datapoint) {

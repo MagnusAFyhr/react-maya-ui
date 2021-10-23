@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import * as IoIcons from 'react-icons/io'
+import Slider from '../../reusable/Slider';
 import ToggleSwitch from "../../reusable/ToggleSwitch";
 
 import btc_logo from './btc.png';
@@ -30,9 +31,6 @@ function buildDepositSubPane(tokenLogo) {
 
 function PopUpDepositPane(props) {
 
-    let onTitle = "Add Liquidity";
-    let offTitle = "Add Liquidity";
-
     const [value, setValue] = useState(true);
 
     function getTitle() {
@@ -44,7 +42,24 @@ function PopUpDepositPane(props) {
     }
 
     function getBody() {
-        
+        if (value) {
+            return (
+                <>
+                    <div className="">
+                        {buildDepositSubPane(btc_logo)}
+                        {buildDepositSubPane(eth_logo)}                    
+                    </div>
+                </>
+            )
+        } else {
+            return (
+                <>
+                    <div className="slider-feedback-area">
+                        <Slider />
+                    </div>
+                </>
+            )
+        }
     }
 
 
@@ -65,7 +80,7 @@ function PopUpDepositPane(props) {
                 </div>
                 <div className='popup-action-pane-body'>
                     <div className='popup-action-pane-body-border'>
-                        
+                        {getBody()}
                     </div>
                 </div> 
                 <div className='popup-action-pane-footer'>

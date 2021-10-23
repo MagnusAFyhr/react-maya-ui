@@ -1,0 +1,39 @@
+.horizontal-slider {
+    width: 90%;
+    max-width: 500px;
+    height: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .example-thumb {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    z-index: 100;
+    background: #1a1a1a;
+    border: 5px solid #ffffff;
+    border-radius: 100%;
+    box-shadow: 0 0 2px 0 rgb(0 0 0 / 44%);
+  }
+  .example-thumb:active {
+    background-color: #ff1100;
+  }
+
+  .example-track {
+    position: relative;
+    background: #ddd;
+  }
+  .example-track.example-track-0 {
+    background: #ff1100;
+  }
+  .horizontal-slider .example-track {
+    height: 4px;
+  }
+  .horizontal-slider .example-thumb {
+    width: 20px;
+    height: 20px;
+    line-height: 38px;
+  }

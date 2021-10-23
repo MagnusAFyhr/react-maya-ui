@@ -3,7 +3,7 @@ import React, { useMemo, useState, useEffect } from "react";
 // title + icon
 // data labels + values
 
-import Table from "../../PositionsTable";
+import Table from "../../reusable/PositionsTable";
 
 
 import './TreasuryBody.css'
@@ -49,7 +49,7 @@ function TreasuryBody(props) {
             <div className='treasury-body-area'>
                 <div className='treasury-body-box'>
                     <div className='treasury-box-body'>
-                        <Table className='treasury-table' initPageSize={24} columns={columns} data={props.data} />
+                        <Table className='treasury-table' initPageSize={12} columns={columns} data={props.data} />
                     </div>
                 </div>
             </div>
