@@ -23,10 +23,9 @@
     color: white;
 }
 .card-border:hover {
-    outline: violet;
-    outline-width: 1px;
-    outline-style: double;
+    background-color: #4a4a4a;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .card-header {

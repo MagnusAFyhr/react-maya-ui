@@ -24,13 +24,10 @@
     width: 100%;
     height: 10%;
     max-height: 10%;
-    font-size: 25pt;
-
-    border-radius: 20px;
 
     display: flex;
-    align-items: flex-end;
-    padding-left: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 .pools-box-body-wrapper {
@@ -64,43 +61,22 @@
     grid-template-columns: repeat(5, 1fr);
     overflow-y: scroll;
 }
+.pools-box-header-title {
+    width: 50%;
+    height: 100%;
+    font-size: 25pt;
 
-span {
-    margin-left: 16px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-items: flex-start;
 }
 
+.pools-box-header-buttons {
+    width: 50%;
+    height: 100%;
 
-.create-pool-button {
-    background-color: #1a1a1a;
-    border: transparent;
-    border-radius: 15px;
-    outline: white;
-    outline-width: 1px;
-    outline-style: double;
-    color: white;
-
-    font-size: 30px;
-    width: 30px;
-    height: 30px;
-    margin-right: 15px;
-}
-.filter-pools-button {
-    background-color: #1a1a1a;
-    border: transparent;
-    border-radius: 15px;
-    outline: white;
-    outline-width: 1px;
-    outline-style: double;
-    color: white;
-
-    font-size: 30px;
-    width: 30px;
-    height: 30px;
-    margin-right: 15px;
-}
-.create-pool-button:hover,.filter-pools-button:hover {
-    background-color: #f5f5f5;
-    color: #1a1a1a;
-    font-weight: bold;
-    transition: 0.5s;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 }

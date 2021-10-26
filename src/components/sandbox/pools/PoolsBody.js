@@ -9,6 +9,7 @@ import Card from "../../reusable/PoolCard";
 import btc_logo from './btc.png';
 import eth_logo from './eth.png';
 import univ3_pos from './univ3-pos.png';
+import StandardButton from "../../reusable/StandardButton";
 
 function PoolsBody(props) {
 
@@ -174,12 +175,14 @@ function PoolsBody(props) {
       <div className='pools-body-area'>
         <div className='pools-body-box'>
           <div className='pools-box-header'>
-            Available Pools
-            <span>
-              <button className='create-pool-button'><IoIcons.IoIosAdd /></button>
-              <button className='filter-pools-button'><TiIcons.TiFilter /></button>
-              <button className='create-pool-button'><IoIcons.IoIosSearch /></button>
-            </span>
+            <div className='pools-box-header-title'>
+              Available Pools
+            </div>
+            <div className="pools-box-header-buttons">
+              <StandardButton iconKey="search" />
+              <StandardButton iconKey="filter" />
+              <StandardButton iconKey="add" />
+            </div>
           </div>
           <div className='pools-box-body-wrapper'>
             <div className='pools-box-body'>

@@ -96,7 +96,9 @@ const dummyPoolData = {
                       <th {...column.getHeaderProps(column.getSortByToggleProps())} >
                         {column.render('Header')}
                         <span>
-                          {column.isSorted ? (column.isSortedDesc ? ' <' : ' >') : ''}
+                          {column.isSorted ? (column.isSortedDesc ? 
+                          <IoIcons.IoIosArrowRoundDown style={{fontSize:15, alignItems:"center"}}/>  : 
+                          <IoIcons.IoIosArrowRoundUp style={{fontSize:15, alignItems:"center"}}/>) : ''}
                         </span>
                       </th>
                     ))}

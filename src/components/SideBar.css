@@ -16,6 +16,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    font-size: 15pt;
 }
 
 .buttons-panel {
@@ -29,13 +31,15 @@
     text-align: center;
 }
 
-.wallet-connect {
+.wallet-connect-area {
     width: 100%;
     height: 30%;
 
     display: block;
+    position: relative;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .media-links-panel {
@@ -70,10 +74,59 @@
     text-decoration: none;
     color: white;
 }
-.panel-button:hover {
-    outline: violet;  
-    outline-width: 1px;
-    outline-style: solid;
-
+.panel-button:hover a {
+    color: #1a1a1a;
+    font-weight: bold;
     transition: 0.5s;
+}
+.panel-button:hover {
+    background-color: white;
+    transition: 0.5s;
+}
+
+
+.wallet-connect-button-area {
+    width: 100%;
+    height: 80%;
+
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.wallet-connect-button {
+    background-color: #1a1a1a;
+
+    border: transparent;
+    border-radius: 160px;
+    outline: white;
+    outline-width: 1px;
+    outline-style: double;
+
+    font-size: 80px;
+    color: white;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    width: 160px;
+    height: 160px;
+}
+
+.wallet-connect-button:hover {
+    background-color: white;
+    color: #1a1a1a;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.wallet-connect-text {
+    white-space: wrap;
+    overflow: hidden;  
+    text-overflow: ellipsis;
+
+    width: 3in;
 }

@@ -1,9 +1,14 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 
+import * as GiIcons from 'react-icons/gi'
+
 import { SidebarData } from './data/SidebarData'
 
+import HorizontalMediaLinksGrid from '../single-use/HorizontalMediaLinksGrid'
+
 import './SideBar.css'
+
 
 // title 
 // buttons
@@ -11,6 +16,7 @@ import './SideBar.css'
 // media links
 
 function SideBar() {
+
     return (
         <>
             <div className='sidebar-panel'>
@@ -32,12 +38,19 @@ function SideBar() {
                     </div>
                 </div>
 
-                <div className="wallet-connect">
-
+                <div className="wallet-connect-area">
+                    <div className="wallet-connect-button-area">
+                        <button className='wallet-connect-button'>
+                            <GiIcons.GiWallet />
+                        </button>
+                    </div>
+                    <div className="wallet-connect-text">
+                        <span>Connect to MetaMask!</span>
+                    </div>
                 </div>
 
                 <div className="media-links-panel">
-            
+                    <HorizontalMediaLinksGrid />
                 </div>
 
             </div>

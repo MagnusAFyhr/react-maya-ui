@@ -1,12 +1,9 @@
-.button-area {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+.reusable-button {
     width: 40px;
-    height: 100%;
-}
-.button {
+    height: 40px;
+
+    margin: 5px;
+
     background-color: #1a1a1a;
 
     border: transparent;
@@ -15,17 +12,15 @@
     outline-width: 1px;
     outline-style: double;
 
-    font-size: 40px;
     color: white;
+    font-size: 40px;
 
     display: flex;
     align-content: center;
     justify-content: center;
-
-    width: 40px;
-    height: 40px;
 }
-.button:hover {
+.reusable-button:hover {
     background-color: white;
     color: #1a1a1a;
+    cursor: pointer;
 }

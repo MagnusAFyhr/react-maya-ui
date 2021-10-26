@@ -1,7 +1,7 @@
 import React from 'react'
 
 import HeaderContentBox from '../components/reusable/HeaderContentBox';
-import BodyContentBox from '../components/sandbox/pools/PoolsBody';
+import PoolsBody from '../components/sandbox/pools/PoolsBody';
 
 import * as FaIcons from 'react-icons/fa'
 
@@ -31,7 +31,7 @@ function Pools() {
                 data={header_data}
                 />
 
-                <BodyContentBox 
+                <PoolsBody 
                 title={"Available Pools"}
                 />
                 

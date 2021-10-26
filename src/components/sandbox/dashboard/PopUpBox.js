@@ -2,6 +2,7 @@ import React, { useMemo, useState, useEffect } from "react";
 
 import * as IoIcons from 'react-icons/io'
 import * as WiIcons from 'react-icons/wi'
+import Button from "../../reusable/StandardButton";
 
 import PopUpActionPane from './PopUpActionPane'
 import './PopUpBox.css'
@@ -17,22 +18,6 @@ function makeDataRow(title, datapoint) {
       </>
   )
 }
-function loadDepositPanel() {
-  return (
-    <>
-    
-    </>
-  )
-}
-
-function loadWithdrawPanel() {
-  return (
-    <>
-
-    </>
-  )
-}
-
 
 function PopUpBox(props) {
 
@@ -57,14 +42,10 @@ function PopUpBox(props) {
               </div>
             </div>
             <div className='popup-box-compound-button-area'>
-              <button className='popup-box-compound-button'>
-                <WiIcons.WiRefresh />
-              </button>
+              <Button iconKey="compound" handleClick={props.onClose} />
             </div>
             <div className='popup-box-close-button-area'>
-              <button className='popup-box-close-button' onClick={props.onClose}>
-                <IoIcons.IoIosClose />
-              </button>
+              <Button iconKey="close" handleClick={props.onClose} />
             </div>
           </div>
 
@@ -94,3 +75,7 @@ function PopUpBox(props) {
 }
 
 export default PopUpBox
+
+//<button className='popup-box-close-button' onClick={props.onClose}>
+ //               <IoIcons.IoIosClose />
+  //            </button>
