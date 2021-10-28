@@ -4,6 +4,7 @@ import * as IoIcons from 'react-icons/io'
 import Slider from '../../reusable/Slider';
 import StandardButton from '../../reusable/StandardButton';
 import ToggleSwitch from "../../reusable/ToggleSwitch";
+import TokenIOBox from '../../reusable/TokenIOBox';
 
 import btc_logo from './btc.png';
 import eth_logo from './eth.png';
@@ -72,17 +73,20 @@ function PopUpActionPane(props) {
     function getBody() {
         if (value) {
             return (
-                <div>
-                    Add!
+                <div style={{width:"100%", display:'block'}}>
+                    <TokenIOBox name={"ETH"}/>
+                    <TokenIOBox name={"BTC"}/>
                 </div>
             )
         } else {
             return (
-                <>
+                <div style={{display:'block'}}>
                     <div className="slider-feedback-area">
                         <Slider maxValue={1000}/>
                     </div>
-                </>
+                    <TokenIOBox name={"ETH"}/>
+                    <TokenIOBox name={"BTC"}/>
+                </div>
             )
         }
     }

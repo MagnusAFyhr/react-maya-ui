@@ -20,8 +20,10 @@ export default function StandardButton(props) {
 
 
     return (
-        <button className="reusable-button" onClick={props.handleClick}>
-            <div className='reusable-button-icon'>{buttonIcons[props.iconKey]}</div>
-        </button>
+        <div className="reusable-button-area">
+            <button className="reusable-button" onClick={props.handleClick}>
+                <div className='reusable-button-icon'>{buttonIcons[props.iconKey]}</div>
+            </button>
+        </div>
     );
 }

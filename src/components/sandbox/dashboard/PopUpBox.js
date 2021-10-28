@@ -1,8 +1,6 @@
 import React, { useMemo, useState, useEffect } from "react";
 
-import * as IoIcons from 'react-icons/io'
-import * as WiIcons from 'react-icons/wi'
-import Button from "../../reusable/StandardButton";
+import StandardButton from "../../reusable/StandardButton";
 
 import PopUpActionPane from './PopUpActionPane'
 import './PopUpBox.css'
@@ -26,7 +24,7 @@ function PopUpBox(props) {
       <div className='popup-box-area'>
         <div className='popup-box-shell'>
           <div className='popup-box-header'>
-            <div className='popup-box-other-area'>
+            <div className='popup-box-left-header-area'>
               <div className='popup-box-inrange-icon'> 
                 <circle className='popup-box-inrange-signal'/> 
                  In Range 
@@ -41,11 +39,9 @@ function PopUpBox(props) {
                 {props.cardData.tokenA}/{props.cardData.tokenB}
               </div>
             </div>
-            <div className='popup-box-compound-button-area'>
-              <Button iconKey="compound" handleClick={props.onClose} />
-            </div>
-            <div className='popup-box-close-button-area'>
-              <Button iconKey="close" handleClick={props.onClose} />
+            <div className='popup-box-right-header-area'>
+              <StandardButton iconKey="compound" handleClick={props.onClose} />
+              <StandardButton iconKey="close" handleClick={props.onClose} />
             </div>
           </div>
 

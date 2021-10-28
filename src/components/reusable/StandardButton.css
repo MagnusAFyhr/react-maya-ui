@@ -1,3 +1,12 @@
+.reusable-button-area {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
 .reusable-button {
     width: 40px;
     height: 40px;

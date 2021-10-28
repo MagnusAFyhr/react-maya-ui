@@ -9,6 +9,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    background-color: rgba(0, 0, 0, 0.8);
 }
 .popup-box-area::before {
     background-color: black;
@@ -45,7 +47,7 @@
     height: 15%;
 }
 
-.popup-box-other-area {
+.popup-box-left-header-area {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -123,71 +125,14 @@
     color: white
 }
 
-.popup-box-compound-button-area {
+.popup-box-right-header-area {
     display: flex;
     align-items: center;
     justify-content: right;
 
-    width: 30%;
+    width: 35%;
     height: 100%;
 
-}
-.popup-box-compound-button {
-    background-color: #1a1a1a;
-
-    border: transparent;
-    border-radius: 40px;
-    outline: white;
-    outline-width: 1px;
-    outline-style: double;
-
-    font-size: 40px;
-    color: white;
-
-    display: flex;
-    align-content: center;
-    justify-content: center;
-
-    width: 40px;
-    height: 40px;
-}
-
-.popup-box-compound-button:hover {
-    background-color: white;
-    color: #1a1a1a;
-}
-
-.popup-box-close-button-area {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 10%;
-    height: 100%;
-
-}
-.popup-box-close-button {
-    background-color: #1a1a1a;
-
-    border: transparent;
-    border-radius: 40px;
-    outline: white;
-    outline-width: 1px;
-    outline-style: double;
-
-    font-size: 40px;
-    color: white;
-
-    display: flex;
-    align-content: center;
-    justify-content: center;
-
-    width: 40px;
-    height: 40px;
-}
-.popup-box-close-button:hover {
-    background-color: white;
-    color: #1a1a1a;
 }
 
 .popup-box-body {
@@ -209,7 +154,6 @@
 .popup-pos-img {
     max-width: 100%;
 }
-
 .popup-box-body-right {
     display: block;
 

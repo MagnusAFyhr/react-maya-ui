@@ -10,6 +10,7 @@ import btc_logo from './btc.png';
 import eth_logo from './eth.png';
 import univ3_pos from './univ3-pos.png';
 import StandardButton from "../../reusable/StandardButton";
+import LargePopUp from "../../reusable/LargePopUp";
 
 function PoolsBody(props) {
 
@@ -22,7 +23,7 @@ function PoolsBody(props) {
     iconTokenB: eth_logo,
     attributes: [
       {
-        title: "Fee Teir",
+        title: "Fee Tier",
         point: "World"
       },{
         title: "Tick Range",
@@ -49,7 +50,7 @@ function PoolsBody(props) {
       iconTokenB: eth_logo,
       attributes: [
         {
-          title: "Fee Teir",
+          title: "Fee Tier",
           point: "World"
         },{
           title: "Tick Range",
@@ -73,7 +74,7 @@ function PoolsBody(props) {
       iconTokenB: eth_logo,
       attributes: [
         {
-          title: "Fee Teir",
+          title: "Fee Tier",
           point: "World"
         },{
           title: "Tick Range",
@@ -97,7 +98,7 @@ function PoolsBody(props) {
       iconTokenB: eth_logo,
       attributes: [
         {
-          title: "Fee Teir",
+          title: "Fee Tier",
           point: "World"
         },{
           title: "Tick Range",
@@ -121,7 +122,7 @@ function PoolsBody(props) {
       iconTokenB: eth_logo,
       attributes: [
         {
-          title: "Fee Teir",
+          title: "Fee Tier",
           point: "World"
         },{
           title: "Tick Range",
@@ -145,7 +146,7 @@ function PoolsBody(props) {
       iconTokenB: eth_logo,
       attributes: [
         {
-          title: "Fee Teir",
+          title: "Fee Tier",
           point: "World"
         },{
           title: "Tick Range",
@@ -164,6 +165,16 @@ function PoolsBody(props) {
     }
   ]
 
+  const [isNewPoolPopUpVisible, setIsNewPoolPopUpVisible] = useState(false);
+  const toggleNewPoolPopup = () => {
+    setIsNewPoolPopUpVisible(!isNewPoolPopUpVisible);
+  }
+
+  const [isFilterPopUpVisible, setIsFilterPopUpVisible] = useState(false);
+  const toggleFilterPopup = () => {
+    setIsFilterPopUpVisible(!isFilterPopUpVisible);
+  }
+
   const [pools, setPools] = useState(poolData)
 
   function addPoolCard() {
@@ -172,6 +183,24 @@ function PoolsBody(props) {
       
   return (
     <>
+      {
+        isNewPoolPopUpVisible && 
+        <LargePopUp 
+        leftHeaderArea="Hello" 
+        titleArea="Create New Pool" 
+        rightHeaderArea={<StandardButton iconKey="close" handleClick={toggleNewPoolPopup} />}
+        leftBody="Left" 
+        rightBody="Right"/>
+      }
+      {
+        isFilterPopUpVisible && 
+        <LargePopUp 
+        leftHeaderArea="Hello" 
+        titleArea="Apply Filters" 
+        rightHeaderArea={<StandardButton iconKey="close" handleClick={toggleFilterPopup} />}
+        leftBody="Left" 
+        rightBody="Right"/>
+      }
       <div className='pools-body-area'>
         <div className='pools-body-box'>
           <div className='pools-box-header'>
@@ -179,9 +208,10 @@ function PoolsBody(props) {
               Available Pools
             </div>
             <div className="pools-box-header-buttons">
-              <StandardButton iconKey="search" />
-              <StandardButton iconKey="filter" />
-              <StandardButton iconKey="add" />
+
+              <StandardButton iconKey="add" handleClick={toggleNewPoolPopup} />
+              <StandardButton iconKey="filter" handleClick={toggleFilterPopup} />
+
             </div>
           </div>
           <div className='pools-box-body-wrapper'>

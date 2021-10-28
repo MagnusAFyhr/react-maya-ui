@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 
-import * as GiIcons from 'react-icons/gi'
+import * as FaIcons from 'react-icons/fa'
 
 import { SidebarData } from './data/SidebarData'
 
@@ -21,7 +21,7 @@ function SideBar() {
         <>
             <div className='sidebar-panel'>
                 <div className="title">
-                    <h1>Maya V1.0</h1>
+                    <h1>MAYA</h1>
                 </div>
 
                 <div className="buttons-panel">
@@ -41,7 +41,7 @@ function SideBar() {
                 <div className="wallet-connect-area">
                     <div className="wallet-connect-button-area">
                         <button className='wallet-connect-button'>
-                            <GiIcons.GiWallet />
+                            <FaIcons.FaWallet />
                         </button>
                     </div>
                     <div className="wallet-connect-text">

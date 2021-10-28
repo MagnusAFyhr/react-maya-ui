@@ -1,14 +1,14 @@
-
-import * as IoIcons from 'react-icons/io'
 import * as RiIcons from 'react-icons/ri'
-
-
 import './HorizontalMediaLinksGrid.css'
 
 function HorizontalMediaLinksGrid() {
 
     const links = [
         {
+            name: 'Whitepaper',
+            icon: <RiIcons.RiNewspaperFill />,
+            url: "www.ourwhitepaper.com"
+        },{
             name: 'Discord',
             icon: <RiIcons.RiDiscordFill />,
             url: "www.discord.com"
@@ -20,6 +20,10 @@ function HorizontalMediaLinksGrid() {
             name: 'Twitter',
             icon: <RiIcons.RiTwitterFill />,
             url: "www.twitter.com"
+        },{
+            name: 'Github',
+            icon: <RiIcons.RiGithubFill />,
+            url: "www.github.com"
         }
     ];
 

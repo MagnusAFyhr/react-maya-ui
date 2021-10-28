@@ -23,7 +23,7 @@ const dummyPoolData = {
   iconTokenB: eth_logo,
   attributes: [
     {
-      title: "Fee Teir",
+      title: "Fee Tier",
       point: "World"
     },{
       title: "Tick Range",
@@ -71,8 +71,6 @@ const dummyPoolData = {
   )
 
   const [isPopUpVisible, setIsPopUpVisible] = useState(false);
-
-  const [poolPopUpData, setPoolPopUpData] = useState(dummyPoolData);
 
   const togglePopup = () => {
     setIsPopUpVisible(!isPopUpVisible);
