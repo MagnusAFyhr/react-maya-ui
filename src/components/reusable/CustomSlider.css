@@ -1,0 +1,40 @@
+.custom-slider-area {
+
+    display: block;
+
+}
+
+.custom-slider-header-area {
+    width: 100%;
+    height: 25px;
+    
+    padding-right: 20px;
+    padding-left: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.custom-slider-title {
+    width: 50%;
+    display: flex;
+
+}
+
+.custom-slider-input {
+    width: 50%; 
+    text-align: right;
+    color: white;
+    font-size: 12pt;
+
+    background-color: transparent;
+    border: none;
+}
+
+.custom-slider-max-button-area:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+

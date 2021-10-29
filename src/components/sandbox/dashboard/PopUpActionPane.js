@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import * as IoIcons from 'react-icons/io'
 import Slider from '../../reusable/Slider';
+import CustomSlider from '../../reusable/CustomSlider';
 import StandardButton from '../../reusable/StandardButton';
 import ToggleSwitch from "../../reusable/ToggleSwitch";
 import TokenIOBox from '../../reusable/TokenIOBox';
@@ -62,6 +63,9 @@ function PopUpActionPane(props) {
 
     const [value, setValue] = useState(true);
 
+    const [token1Amt, setToken1Amt] = useState(0);
+    const [token2Amt, setToken2Amt] = useState(0);
+
     function getTitle() {
         if (value) {
             return "Add Liquidity";
@@ -71,34 +75,14 @@ function PopUpActionPane(props) {
     }
 
     function getBody() {
-        if (value) {
-            return (
-                <div style={{width:"100%", display:'block'}}>
-                    <TokenIOBox name={"ETH"}/>
-                    <TokenIOBox name={"BTC"}/>
-                </div>
-            )
-        } else {
-            return (
-                <div style={{display:'block'}}>
-                    <div className="slider-feedback-area">
-                        <Slider maxValue={1000}/>
-                    </div>
-                    <TokenIOBox name={"ETH"}/>
-                    <TokenIOBox name={"BTC"}/>
-                </div>
-            )
-        }
+        return (
+            <div style={{width:"100%", display:'block'}}>
+                {!value && <CustomSlider title="Shares"/>}
+                <TokenIOBox name={props.tokenA} isDeposit={value} value={token1Amt} setValue={setToken1Amt} />
+                <TokenIOBox name={props.tokenB} isDeposit={value} value={token2Amt} setValue={setToken2Amt} />
+            </div>
+        )
     }
-    /**{BuildDepositSubPane(btc_logo)}
-     <>
-                    <div className="slider-feedback-area">
-                        <Slider />
-                    </div>
-                </>
-     * 
-     */
-
 
     return (
         <>
@@ -108,11 +92,11 @@ function PopUpActionPane(props) {
                         {getTitle()}
                     </div>
                     <div className="popup-action-pane-toggle-switch-area">
-                        <ToggleSwitch
+                        {!props.withdrawDisabled && <ToggleSwitch
                             isOn={value}
                             onColor="#2bff00"
                             handleToggle={() => setValue(!value)}
-                        />
+                        />}
                     </div>
                 </div>
                 <div className='popup-action-pane-body'>
@@ -131,30 +115,3 @@ function PopUpActionPane(props) {
 }
 
 export default PopUpActionPane
-
-
-/**
- *                <div className='popup-action-pane-header'>
-                    <div className="popup-action-pane-title-area">
-                        {title}
-                    </div>
-                    <div className="popup-action-pane-toggle-switch-area">
-                        <ToggleSwitch
-                            isOn={value}
-                            onColor="#EF476F"
-                            handleToggle={() => setValue(!value)}
-                        />
-                    </div>
-                </div>
-                <div className='popup-action-pane-body'>
-                    <div className='popup-action-pane-body-border'>
-                        {buildDepositSubPane(btc_logo)}
-                        {buildDepositSubPane(eth_logo)}
-                    </div>
-                </div>
-                <div className='popup-action-pane-footer'>
-                    <button className='popup-action-pane-action-button'>
-                        <IoIcons.IoIosCheckmark />
-                    </button>
-                </div> 
- */

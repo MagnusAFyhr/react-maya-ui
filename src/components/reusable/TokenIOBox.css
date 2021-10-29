@@ -5,6 +5,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    margin-top: 5pt;
 }
 
 .token-io-box-icon-area {
@@ -12,12 +14,12 @@
     width: 20%;
 
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-end;
 }
 
 .token-io-box-icon {
-    height: 80%;
+    height: 90%;
     max-width: 100%;
 
     display: flex;
@@ -25,15 +27,40 @@
     justify-content: center;
 }
 
-.token-io-box-name {
-    height: 100%;
+.token-io-box-name-area { 
     width: 20%;
 
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    display: block;
 
     font-size: 15pt;
+}
+
+.token-io-box-name {
+    height: 50%;
+    width: 100%;
+    
+    font-size: 15pt;
+    text-align: center;
+    
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.token-io-box-max-button-area {
+    height: 50%;
+    width: 100%;
+
+    font-size: 10pt;
+    text-align: center;
+    
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.token-io-box-max-button-area:hover {
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .token-io-box-input-output-area {
@@ -45,13 +72,10 @@
     justify-content: center;
 }
 
-.token-io-box-input-output-max-button-area {
-    text-align: end;
-}
-
 .token-io-box-input-output-field {
     width: 100%;
     max-width: 100%;
+    height: 100%;
 
     text-align: end;
 
@@ -59,5 +83,11 @@
     border: transparent;
     color: white;
 
-    margin-right: 10px;
+    font-size: 12pt;
+
+    margin-right: 20px;
+    
+}
+.token-io-box-input-output-field:focus {
+    outline: transparent;
 }

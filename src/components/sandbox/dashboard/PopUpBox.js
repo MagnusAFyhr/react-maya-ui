@@ -60,7 +60,7 @@ function PopUpBox(props) {
                 </div>
               </div>
               <div className='popup-box-right-div-area-bottom'>
-                <PopUpActionPane />
+                <PopUpActionPane tokenA={props.cardData.tokenA} tokenB={props.cardData.tokenB} />
               </div>
             </div>
           </div>

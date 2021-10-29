@@ -52,17 +52,20 @@
     align-items: center;
     justify-content: left;
 
-    width: 40%;
+    width: 35%;
     height: 100%;
 }
 
 .large-popup-title-area {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
 
-    width: 20%;
+    width: 30%;
     height: 100%;
+
+    font-size: 20pt;
+    text-align: center;
 }
 
 .large-popup-right-header-area {
@@ -70,8 +73,10 @@
     align-items: center;
     justify-content: right;
 
-    width: 40%;
+    width: 35%;
     height: 100%;
+
+    padding-right: 10pt;
 
 }
 .large-popup-body {

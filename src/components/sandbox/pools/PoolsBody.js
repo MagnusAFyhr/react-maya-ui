@@ -11,6 +11,7 @@ import eth_logo from './eth.png';
 import univ3_pos from './univ3-pos.png';
 import StandardButton from "../../reusable/StandardButton";
 import LargePopUp from "../../reusable/LargePopUp";
+import PopUpActionPane from "../dashboard/PopUpActionPane";
 
 function PoolsBody(props) {
 
@@ -190,7 +191,7 @@ function PoolsBody(props) {
         titleArea="Create New Pool" 
         rightHeaderArea={<StandardButton iconKey="close" handleClick={toggleNewPoolPopup} />}
         leftBody="Left" 
-        rightBody="Right"/>
+        rightBody={<PopUpActionPane tokenA="tokA" tokenB="tokB" withdrawDisabled={true}/>} />
       }
       {
         isFilterPopUpVisible && 

@@ -130,8 +130,10 @@
     align-items: center;
     justify-content: right;
 
-    width: 35%;
+    width: 40%;
     height: 100%;
+
+    padding-right: 10pt;
 
 }
 
